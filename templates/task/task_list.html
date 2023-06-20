@@ -45,8 +45,8 @@
                  {% else %}
                    <ul class="list-inline">
                      <li class="list-inline-item">no tags!</li>
-                     <li class="list-inline-item"><a href="#">Update</a></li>
-                     <li class="list-inline-item"><a href="#">Delete</a></li>
+                     <li class="list-inline-item"><a href="{% url 'task:task-update' pk=task.pk %}">Update</a></li>
+                     <li class="list-inline-item"><a href="{% url 'task:task-delete' pk=task.pk%}">Delete</a></li>
                    </ul>
                  {% endif %}
                </div>
