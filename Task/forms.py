@@ -1,4 +1,6 @@
 from django import forms
+from django.core.exceptions import ValidationError
+from django.utils import timezone
 
 from Task.models import Task, Tag
 
@@ -8,6 +10,14 @@ class TaskForm(forms.ModelForm):
          widget=forms.DateTimeInput(attrs={'type': 'datetime-local'}),
          required=False
      )
+
+    def clean_deadline_date(self):
+        deadline_date = self.cleaned_data["deadline_date"]
+        if deadline_date and deadline_date < timezone.now():
+            raise ValidationError(
+                "The deadline date must be after the created date"
+            )
+        return deadline_date
 
     class Meta:
         model = Task
