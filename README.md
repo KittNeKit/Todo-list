@@ -11,7 +11,7 @@ git clone https://github.com/your-username/Todo-list
 ```bash
 cd project-name
 ```
-3Fill .env_sample file with your examples of env variables
+3. Fill .env_sample file with your examples of env variables
 file:
 ```
 # Django Secret Key
