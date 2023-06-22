@@ -7,24 +7,41 @@ This is a simple Todo List project implemented using Python and Django framework
 ```bash
 git clone https://github.com/your-username/Todo-list
 ```
+2. Change to the project's directory:
+```bash
+cd project-name
+```
+3Fill .env_sample file with your examples of env variables
+file:
+```
+# Django Secret Key
+DJANGO_SECRET_KEY=your_secret_key_here
 
-2. Install the dependencies
+# Django Debug Mode
+DJANGO_DEBUG=1
+```
+
+4. Install the dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
-3. Set up the database:
+
+5. Set up the database:
 
 Run the migrations
 
 ```bash
 python manage.py migrate
 ```
-4. Start the development server
+
+6. Start the development server
+
 ```bash
 python manage.py runserver
 ```
-5. Access the website locally at http://localhost:8000.
+
+7. Access the website locally at http://localhost:8000.
 
 
 Enjoy!
