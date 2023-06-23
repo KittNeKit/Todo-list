@@ -9,16 +9,24 @@ git clone https://github.com/your-username/Todo-list
 ```
 2. Change to the project's directory:
 ```bash
-cd project-name
+cd Todo-list
 ```
 3. Сopy .env_sample file with your examples of env variables to your .env
-file:
+file
+4. Once you're in the desired directory, run the following command to create a virtual environment:
+```bash
+python3 -m venv venv
 ```
-# Django Secret Key
-DJANGO_SECRET_KEY=your_secret_key_here
+5. Activate the virtual environment:
 
-# Django Debug Mode
-DJANGO_DEBUG=1
+On macOS and Linux:
+
+```bash
+source venv/bin/activate
+```
+On Windows:
+```bash
+venv\Scripts\activate
 ```
 
 4. Install the dependencies
