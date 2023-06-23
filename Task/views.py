@@ -30,7 +30,7 @@ class TaskDeleteView(generic.DeleteView):
 
 
 class ChangeTaskProgresView(View):
-    def get(self, request, pk, *args, **kwargs):
+    def post(self, request, pk, *args, **kwargs):
         task = Task.objects.get(pk=pk)
 
         task.progres = not task.progres

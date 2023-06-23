@@ -53,11 +53,18 @@
              </div>
 
              <div class="col-lg-3">
-               {% if task.progres %}
-                 <a class="btn btn-secondary" href="{% url 'task:task-change-progres' pk=task.pk %}">Undo</a>
-               {% else %}
-                 <a class="btn btn-success" href="{% url 'task:task-change-progres' pk=task.pk %}">Complete</a>
-               {% endif %}
+               <form action="{% url 'task:task-change-progres' pk=task.pk %}" method="post">
+                 {% csrf_token %}
+                   {% if task.progres %}
+                     <button class="btn btn-secondary" type="submit">
+                       Undo
+                     </button>
+                   {% else %}
+                     <button class="btn btn-success" type="submit">
+                       Complete
+                     </button>
+                   {% endif %}
+               </form>
              </div>
            </div>
 
